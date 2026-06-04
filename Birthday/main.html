@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 400px;
+      overflow: hidden;
+      max-height: 100vh;
+      position: relative;
+    }
+
+    h1 {
+      color: #000000;
+      font-size: 3rem;
+      text-align: center;
+      font-family: sans-serif;
+      text-transform: uppercase;
+
+      text-shadow:
+        -1px -1px 0 #00ff00,
+        1px -1px 0 #00ff00,
+        -1px 1px 0 #00ff00,
+        1px 1px 0 #00ff00;
+    }
+
+    .content_box {
+      position: relative;
+      margin-top: 10px;
+      padding: 2vw;
+      z-index: 1000;
+    }
+
+    .content_box .mid_box {
+      margin-top: 150px;
+      color: #e5e0ff;
+      padding: 0 6vw;
+      word-break: keep-all;
+    }
+    .content_box .mid_box .txt_title {
+      font-weight: bold;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .txt_mid {
+      margin-top: 8px;
+    }
+
+    .txt_mini {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #9391a0;
+    }
+    section {
+      position: relative;
+      margin: 0 auto;
+      border: solid;
+      height: 100vh;
+      overflow: hidden;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      box-sizing: border-box;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      border: 8px solid #00ff00;
+      -webkit-animation-name: riseup;
+      animation-name: riseup;
+      -webkit-animation-duration: 2500ms;
+      animation-duration: 2500ms;
+      -webkit-animation-fill-mode: forward;
+      animation-fill-mode: forward;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      background:
+        -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(transparent),
+          color-stop(hsla(255, 10%, 10%, 1)),
+          to(hsla(255, 10%, 0%, 1))
+        ),
+        url('https://i.ibb.co/tq8HTXQ/cutcube.png');
+      background:
+        -webkit-linear-gradient(
+          transparent,
+          hsla(255, 10%, 10%, 1),
+          hsla(255, 10%, 0%, 1)
+        ),
+        url('https://i.ibb.co/tq8HTXQ/cutcube.png');
+      background:
+        -o-linear-gradient(
+          transparent,
+          hsla(255, 10%, 10%, 1),
+          hsla(255, 10%, 0%, 1)
+        ),
+        url('https://i.ibb.co/tq8HTXQ/cutcube.png');
+      background:
+        linear-gradient(
+          transparent,
+          hsla(255, 10%, 10%, 1),
+          hsla(255, 10%, 0%, 1)
+        ),
+        url('https://i.ibb.co/tq8HTXQ/cutcube.png');
+
+      background-position:
+        center,
+        -60px top,
+        center;
+    }
+
+    .ufo {
+      left: 30%;
+      top: 200px;
+      position: absolute;
+      -webkit-animation-duration: 2000ms;
+      animation-duration: 2000ms;
+      -webkit-animation-name: hovering;
+      animation-name: hovering;
+      -webkit-animation-delay: 1000ms;
+      animation-delay: 1000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+    }
+
+    #playBtn {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      top: 182px;
+      left: 17%;
+      cursor: pointer;
+      transform: translateX(-50%) scale(1);
+      transition: all 0.2s linear;
+      animation: opacity_ani 1s linear;
+    }
+
+    .click_btn {
+      margin-top: 6px;
+      display: block;
+      color: aliceblue;
+      font-size: 20px;
+    }
+    #playBtn:hover {
+      transform: translateX(-50%) scale(1.2);
+    }
+
+    @keyframes opacity_ani {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes riseup {
+      0% {
+        opacity: 0;
+        height: 0;
+      }
+      100% {
+        opacity: 1;
+        height: 100vh;
+      }
+    }
+
+    @keyframes riseup {
+      0% {
+        opacity: 0;
+        height: 0;
+      }
+      100% {
+        opacity: 1;
+        height: 100vh;
+      }
+    }
+
+    @-webkit-keyframes hovering {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      50% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes hovering {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      50% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <body>
+    <section>
+      <div class="content_box">
+        <h1>지구인들아<br />환영한다</h1>
+        <div class="mid_box">
+          <div class="txt_title">나, 왹져리우스 2세👽</div>
+          <div class="txt_mid">
+            지구인들은 어떻게 노는지 궁금하여,<br />
+            여러 세계에 서식중인 너희 지구인들을 납치해봤다.<br /><br />
+            재밌게 놀다가 다시 너희 세계로 돌려다주겠다.<br /><br />
+            그럼 20000
+          </div>
+          <div class="txt_mini">
+            Quest. 왹져리우스 파티에서 죽지않고 살아남기
+          </div>
+        </div>
+      </div>
+      <img
+        class="ufo"
+        src="https://i.ibb.co/h7Qjccc/ufo.png"
+        alt="spaceship hovering"
+      />
+      <button id="playBtn" class="play_btn">▶ PLAY</button>
+      <div id="youtubePlayer"></div>
+    </section>
+
+    <script>
+      const playBtn = document.getElementById('playBtn')
+      const youtubePlayer = document.getElementById('youtubePlayer')
+
+      playBtn.addEventListener('click', () => {
+        youtubePlayer.innerHTML = `
+        <iframe
+            width="1"
+            height="1"
+            style="opacity:0; position:absolute; pointer-events:none;"
+            src="https://www.youtube.com/embed/aCmh_v6C7K4?autoplay=1&playsinline=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+        `
+      })
+    </script>
+  </body>
+</html>
